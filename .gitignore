@@ -1,0 +1,6 @@
+.env
+.next
+.netlify
+.vscode
+node_modules/
+out/
