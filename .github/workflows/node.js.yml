@@ -1,0 +1,41 @@
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ develop, main ]
+  pull_request:
+    branches: [ develop, main ]
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: cp .env.example .env
+    - run: echo $GSHEET_CREDS_JSON > gsheet-creds.json
+      env:
+        GSHEET_CREDS_JSON: ${{ secrets.GSHEET_CREDS_JSON }}
+    - run: npm i
+    - run: npm run update-gsheet-data
+      env:
+        GSHEET_ID: ${{ secrets.GSHEET_ID }}
+    - run: npm run build
+    - name: Deploy to netlify
+      uses: netlify/actions/cli@master
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      with:
+        args: deploy -d out --message "branch ${{ steps.vars.outputs.branch }} ${{ steps.vars.outputs.sha_short }}"

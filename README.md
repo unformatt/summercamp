@@ -9,8 +9,7 @@ A statically generated site using Next.js and Google Sheets
 - Then go to Credentials and click "Create Credentials" -> Service account -> Role: Viewer:
     - https://console.cloud.google.com/apis/api/sheets.googleapis.com/credentials (select the new project!)
 - After adding the new account, go to the account under "Service Accounts" nav
-- Click ADD KEY > create new key > JSON > Download JSON key file to root of this repo (do not commit this file)
-- Set `GSHEETS_CREDS_JSON` env var to the name of the JSON file you just downloaded (see below about `.env` file)
+- Click ADD KEY > create new key > JSON > Download JSON key file to root of this repo and name it gsheet-creds.json
 - Then take the crazy email address created for the service account and share the GSheet with that email
 
 

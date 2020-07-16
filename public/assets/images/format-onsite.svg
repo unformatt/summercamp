@@ -1,0 +1,15 @@
+
+<svg width="380px" height="330px" viewBox="0 0 380 330" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Triangle" fill="#000000" points="127 0 217 123 37 123"></polygon>
+        <g id="Group" transform="translate(198.000000, 97.000000)" fill="#000000">
+            <polygon id="Triangle-Copy-3" points="91.5 0 156 88 27 88"></polygon>
+            <polygon id="Triangle-Copy-4" points="91 30 169 136 13 136"></polygon>
+            <polygon id="Triangle-Copy-5" points="91 61 182 186 0 186"></polygon>
+            <rect id="Rectangle-Copy" x="78" y="162" width="24" height="71"></rect>
+        </g>
+        <polygon id="Triangle-Copy" fill="#000000" points="127 42 236 191 18 191"></polygon>
+        <polygon id="Triangle-Copy-2" fill="#000000" points="127 86 254 261 0 261"></polygon>
+        <rect id="Rectangle" fill="#000000" x="108" y="228" width="35" height="99"></rect>
+    </g>
+</svg>

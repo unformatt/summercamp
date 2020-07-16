@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "prettier",
+    "prettier/standard",
+    "prettier/react",
+    "plugin:react/recommended"
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "react/react-in-jsx-scope": 0,
+    "no-unused-expressions": 0,
+    "no-unused-vars": [2, {"vars": "all", "args": "after-used"}]
+  },
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  }
+}

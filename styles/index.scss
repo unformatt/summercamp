@@ -1,0 +1,45 @@
+@import './tailwind.css';
+@import './fonts.css';
+@import '../components/header/index.scss';
+@import '../components/filter/index.scss';
+@import '../components/campGrid/index.scss';
+
+
+body { background: white; }
+
+button,
+a.button {
+  color: theme('colors.blue');
+  font-size: 1.1em;
+  font-family: theme('fontFamily.condensed');
+  font-weight: theme('fontWeight.bold');
+  background-color: theme('colors.gray');
+  border: 0;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  height: 43px;
+  line-height: 27px;
+  line-height: 1.6em;
+  margin: 0 8px 8px 8px;
+  padding: 8px 32px 0px 32px;
+  text-align: center;
+  transition-duration: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+
+  &:hover {
+    color: white;
+    background-color: theme('colors.blue');
+  }
+
+  &.red {
+    color: theme('colors.white');
+    background-color: theme('colors.red');
+
+    &:hover {
+      background-color: theme('colors.dark-red');
+    }
+
+  }
+}

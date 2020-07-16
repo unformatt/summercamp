@@ -1,0 +1,126 @@
+.camp-grid {
+  width: 100%;
+  margin: 0 auto;
+
+  .gridjs {
+    overflow: visible; // Needed to show sticky header
+    padding: 0;
+
+    .gridjs-wrapper {
+      border-radius: 0;
+      border: 0;
+      box-shadow: none;
+      overflow: visible;  // Needed to show sticky header
+
+      table.gridjs-table {
+
+        text-align: left;
+        position: relative;
+
+        .gridjs-th, .gridjs-td {
+          padding: 0.75em 1em;
+        }
+
+        .gridjs-thead {
+
+          .gridjs-th,
+          .gridjs-th:focus {
+            background-color: theme('colors.black') !important;
+            color: white;
+            border: 5px solid white;
+
+            // Sticky header on bigger screens
+            @screen md {
+              position: -webkit-sticky;
+              position: sticky;
+              z-index: 2;
+              top: 0;
+            }
+
+            button.gridjs-sort {
+              opacity: 1.0;
+              background-position-y: center;
+              background-size: 100%;
+              &.gridjs-sort-neutral {
+                background-image: url(/assets/images/sort-arrows.png);
+              }
+              &.gridjs-sort-asc {
+                background-image: url(/assets/images/sort-asc.png);
+              }
+              &.gridjs-sort-desc {
+                background-image: url(/assets/images/sort-desc.png);
+              }
+            }
+
+            &:hover, &:focus {
+              background-color: theme('colors.darker-gray');
+            }
+
+            // Camp format
+            &:nth-child(1) { width: 50px; border-left: 0; }
+
+            // Camp Name
+            &:nth-child(2) { width: 25%; }
+
+            // Location
+            &:nth-child(3) { width: 10%; }
+
+            button.gridjs-sort {}
+          }
+        }
+
+        .gridjs-td {
+          background-color: theme('colors.gray');
+          border: 5px solid white;
+
+          span a {
+            color: theme('colors.blue');
+          }
+
+          .camp-link {
+            img {
+              display: inline;
+              position: relative;
+              top: -2px;
+              width: 15px;
+            }
+          }
+          .reg-by { font-size: .8em; }
+          .format-icon {
+            width: 20px;
+            margin: 0 2px;
+          }
+        }
+
+        th, td {
+          // Hide all columns except mobile view on small screens
+          display: none;
+          // Mobile view column
+          &:nth-last-child(1) {
+            display: table-cell;
+          }
+          // Remove borders from side columns which creates extra visual padding
+          &:nth-child(1),
+          &:nth-last-child(1) { border-left: 0 !important; }
+          &:nth-last-child(1),
+          &:nth-last-child(2) { border-right: 0 !important; }
+        }
+
+        @screen md {
+          th, td {
+            display: table-cell;
+            // Mobile view column
+            &:nth-last-child(1) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    .gridjs-footer {
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+header {
+
+  img {
+    margin: 0 auto;
+    width: 300px;
+  }
+
+  h1 { margin: 0 auto; }
+
+  .submit-camp {
+    background-color: theme('colors.red');
+    color: theme('colors.white');
+  }
+
+  a.submit-camp {
+    margin: 0 auto;
+    text-align: center;
+    display: inline-block;
+
+
+    @screen md {
+      position: absolute;
+      width: auto;
+      top: 20px;
+      right: 20px;
+    }
+  }
+}
