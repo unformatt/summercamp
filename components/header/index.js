@@ -4,8 +4,9 @@ export default function Header() {
       <div className="header flex flex-col pt-4">
         <img className="p-2" src="/assets/images/bg_logo.svg" />
         <div className="p-2 text-sm text-center">
-          Dek Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
-          ipsum Lorem ipsum Lorem ipsum
+          For this feature, The Boston Globe reached out to camps across New England.
+          Here are the camps that still had availability as of mid-July. Please
+          contact the camps directly for further details.
         </div>
         <a
           className="submit-camp button red"
@@ -13,7 +14,7 @@ export default function Header() {
           rel="noreferrer"
           target="_blank"
         >
-          Submit your camp
+          Add a camp
         </a>
       </div>
     </header>
