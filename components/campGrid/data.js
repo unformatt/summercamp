@@ -23,7 +23,7 @@ const campInfoFormatter = (row, includeLocation = false) => {
 }
 
 const checkWebsiteFormatter = value =>
-  value.trim()
+  value && value.trim()
     ? value
     : gridHtml('<span class="opacity-50">Check camp website</span>')
 
