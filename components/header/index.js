@@ -5,7 +5,7 @@ export default function Header() {
         <img className="p-2" src="/assets/images/bg_logo.svg" />
         <div className="p-2 text-sm text-center">
           For this feature, The Boston Globe reached out to camps across New England.
-          Here are the camps that still had availability as of mid-July. Please
+          Here are the camps that still had availability as of early August. Please
           contact the camps directly for further details.
         </div>
         <a
